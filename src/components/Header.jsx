@@ -11,6 +11,7 @@ import Navbar from "./Navbar";
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
+  
   const [user, serUser] = useState(true);
   const navigate = useNavigate();
 
