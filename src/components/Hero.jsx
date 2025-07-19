@@ -1,7 +1,6 @@
-import { useState, useEffect  } from 'react';
+import React , { useState, useEffect, useContext  } from 'react';
 import bg from '../assets/bg.png'
 import bgHero from '../assets/bg-hero.png'
-import Item from './Item.jsx';
 
 import { FaArrowRight } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
@@ -9,9 +8,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
 import {  Autoplay } from 'swiper/modules';
-import { dummyBooks as books } from '../assets/data.jsx'
+import Item from './Item.jsx';
+import { ShopContext } from '../context/ShopContext.jsx';
+
 
 const Hero = () => {
+    const { books } = useContext(ShopContext);
     const [popularBooks, setPopularBooks] = useState([]);
 
     useEffect(() => {
@@ -29,16 +31,16 @@ const Hero = () => {
             {/* Left side */}
             <div className='max-padd-container flex flex-col
             h-full justify-center pt-8'>
-                <h3 className='bold-24 text-secondary font-thin'>Explore Books You'll Love</h3>
-                <h1 className='h1 max-w-[699px] !font-[800]'>Find Yur next Book</h1>
-                <h2 className='capitalize h2 tracking-wider'>Up to 40% Off This Week</h2>
+                <h3 className='bold-24 text-secondary font-thin'>Explora Libros que amaras</h3>
+                <h1 className='h1 max-w-[699px] !font-[800]'>Encuentra tu próximo libro favorito</h1>
+                <h2 className='capitalize h2 tracking-wider'>Hasta 40% de Descuento en tu primera compra</h2>
                 <p className='max-w-xl pt-5'>
-                    Discover a wide range of books across various genres. Whether you're into fiction, non-fiction, or academic texts, we have something for everyone. Enjoy exclusive discounts and offers on your favorite titles.
-                    Enjoy fast shipping and easy returns. Shop now and dive into the world of literature with us!
+                    Descubre una amplia variedad de libros de todos los géneros. Ya sea ficción, no ficción o textos académicos, tenemos algo para todos. Disfruta de descuentos exclusivos en tus títulos favoritos.
+                    Envíos rápidos y devoluciones fáciles. ¡Compra ahora y sumérgete en el mundo de la literatura con nosotros!
                 </p>
                 {/* BUTTON */}
                 <div className='flex mt-4'>
-                    <Link to={'/shop'} className='bg-white text-xs font-medium pl-6 rounded-full flexCenter gap-x-6'>Check our Latest Stock
+                    <Link to={'/shop'} className='bg-white text-xs font-medium pl-6 rounded-full flexCenter gap-x-6'>Ver nuestros Stocks de Libros
                         <FaArrowRight className='bg-secondary 
                         text-white rounded-full h-11 w-11 p-3 m-[3px] border border-white group-hover:bg-primary group-hover:text-black transition-all
                         duration-500'/>
@@ -47,8 +49,8 @@ const Hero = () => {
             </div>
         </div>
         {/* RIGHT SIDE */}
-        <div className='hidden lg:block flex-[2] bg-primary  rounded-2xl bg-center bg-cover bg-no-repeat'>
-            <div>
+        <div className='hidden lg:block flex-[2] bg-primary  rounded-2xl bg-center bg-cover bg-no-repeat' style={{backgroundImage: `url(${bgHero})`} }>
+            <div className='max-w-sm pt-28'>
                 {/* Container */}
                 <div>
                     {

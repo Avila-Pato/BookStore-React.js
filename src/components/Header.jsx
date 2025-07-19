@@ -1,19 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logoImg from "../assets/logo.png";
 import userImg from "../assets/user.png";
 import { FaBars, FaBarsStaggered } from "react-icons/fa6";
 import { FaSearch } from "react-icons/fa";
 import { RiUserLine } from "react-icons/ri";
+import { ShopContext } from "../context/ShopContext.jsx";
 import Navbar from "./Navbar";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
+
+   const { navigate, user, setUser } = useContext(ShopContext);
   
-  const [user, serUser] = useState(true);
-  const navigate = useNavigate();
 
   const toggleMenu = () => setMenuOpened((prev) => !prev);
 
