@@ -9,8 +9,8 @@ const Categories = () => {
   const colors = ["bg-[#aedae6]", "bg-[#fff6c9]", "bg-[#fddbdb]"];
 
   return (
-    <section className='max-padd-container pl-12 pt-16'>
-        <Title title1={'Categoría'} title2={' libros'} titleStyles={'pb-6'} />
+    <section className='max-padd-container pl-12 pt-16 pb-4'>
+        <Title title1={'Categoría'} title2={' libros'} titleStyles={'pb-10'} paraStyles={'hidden'} />
         {/* Contenedor */}
         <div className='flex gap-9 flex-wrap'>
           {categories.map((cat, index) =>(
