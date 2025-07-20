@@ -23,6 +23,9 @@ const Header = () => {
     }
   })
   
+  useEffect(() => {
+    window.scrollTo({top: 0, behavior: "smooth"});
+  }, [searchQuery]);
 
   const toggleMenu = () => setMenuOpened((prev) => !prev);
 
@@ -54,7 +57,7 @@ const Header = () => {
         <div
           className={`bg-white ring-1 ring-slate-900/10 rounded-full overflow-hidden transition-all duration-300 ease-in-out ${
             showSearch
-              ? "w-[266px] opacity-100 px-4 py-2.5"
+              ? "w-[256px] opacity-100 px-4 py-2.5"
               : "w-0 opacity-0 p-0"
           }`}
         >
@@ -65,7 +68,7 @@ const Header = () => {
 
             type="text"
             placeholder="Busca tu libro..."
-            className="bg-transparent w-full text-sm outline-none pr-10 placeholder:text-gray-400"
+            className="bg-transparent w-full text-sm outline-none pr-20 placeholder:text-gray-400"
           />
         </div>
         <div

@@ -8,7 +8,7 @@ export const ShopContext = createContext();
 export const ShopContextProvider = ({ children }) => {
   const navigate = useNavigate();
   const [books, setBooks] = useState([]);
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
 
   const currency = import.meta.env.VITE_CURRENCY;

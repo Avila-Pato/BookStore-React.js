@@ -27,6 +27,10 @@ const Shop = () => {
     filteredBooks.filter((b) => b.inStock).length / itemsPerPage
   );
 
+    useEffect(() => {
+      window.scrollTo({top: 0, behavior: "smooth"});
+    }, [CurrentPage]);
+
   return (
     <div className="max-padd-container py-16 pt-28">
       <Title

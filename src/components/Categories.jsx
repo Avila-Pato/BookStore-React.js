@@ -9,10 +9,10 @@ const Categories = () => {
   const colors = ["bg-[#aedae6]", "bg-[#fff6c9]", "bg-[#fddbdb]"];
 
   return (
-    <section className='max-padd-container pl-12 pt-16 pb-4'>
+    <section className='mx-auto max-w-[1440px] px-6 lg:px-10 pt-16 pb-4'>
         <Title title1={'Categoría'} title2={' libros'} titleStyles={'pb-10'} paraStyles={'hidden'} />
         {/* Contenedor */}
-        <div className='flex gap-9 flex-wrap'>
+        <div className='flex sm:justify-center lg:justify-start gap-9 flex-wrap'>
           {categories.map((cat, index) =>(
               <div key={index} onClick={() => navigate(`/shop/${cat.name.toLowerCase()}`)} 
               className='flexCenter flex-col cursor-pointer group'>
