@@ -20,8 +20,20 @@ html, body {
 
 /* width */
 ::-webkit-scrollbar {
-  display: none;
+  display: ruby-text;
+  width: 10px;
 }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #d8eafa;
+}
+
 
 
 @layer components {

@@ -1,8 +1,27 @@
 import React from 'react'
+import { blogs } from '../assets/data'
 
 const Blog = () => {
   return (
-    <div>Blog</div>
+    <div className='max-padd-container py-16 pt-20'>
+        {/* Contenedor */}
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 gap-y-12 pt-6'>
+          {blogs.map((blog) => (
+            <div key={blog.title} className='relative'>
+              <img  src={blog.image} alt={blog.title} className='rounded-lg'/>
+              <p>{blog.category}</p>
+              <h5 className='h5 mb-1 line-clamp-1'>{blog.title}</h5>
+              <p>
+                Descubre nuestros libros mas destacados, seleccionados por su calidad, popularidad y valor literario. Cada uno de estos libros ha sido elegido para ofrecerte una experiencia de lectura excepcional
+              </p>
+              <button className='underline mt-2 bold-14 line-clamp-2'>Continuar leyendo</button>
+            </div>
+          ))
+
+          }
+
+        </div>
+    </div>
   )
 }
 
