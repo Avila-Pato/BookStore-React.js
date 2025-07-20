@@ -9,6 +9,8 @@ export const ShopContextProvider = ({ children }) => {
   const navigate = useNavigate();
   const [books, setBooks] = useState([]);
   const [user, setUser] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
+
   const currency = import.meta.env.VITE_CURRENCY;
 
   // Mock data fetch
@@ -26,6 +28,8 @@ export const ShopContextProvider = ({ children }) => {
     user,
     setUser,
     currency,
+    searchQuery,
+    setSearchQuery,
   };
 
   return (

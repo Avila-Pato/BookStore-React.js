@@ -6,7 +6,7 @@ import { ShopContext } from '../context/ShopContext.jsx';
 const Item = ({book, fromHero}) => {
 
   const {navigate, currency} = useContext(ShopContext);
-
+// card de libros
   return book ? (
     <div className={`overflow-hidden sm:p-4 ${fromHero ?
       "bg-white" : "sm:bg-primary"} rounded-xl` }>

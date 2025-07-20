@@ -4,6 +4,7 @@ import { RiSecurePaymentLine } from "react-icons/ri";
 import { FaUsersLine } from "react-icons/fa6";
 import { TbLocation } from "react-icons/tb";
 const Achievements = () => {
+
   const statistics = [
     { label: "Libros Vendidos", value: "10.000" },
     { label: "Clientes Satisfechos", value: "50,000" },

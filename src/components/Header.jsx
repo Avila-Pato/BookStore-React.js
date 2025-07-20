@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logoImg from "../assets/logo.png";
 import userImg from "../assets/user.png";
 import { FaBars, FaBarsStaggered } from "react-icons/fa6";
@@ -13,7 +13,15 @@ const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
 
-   const { navigate, user, setUser } = useContext(ShopContext);
+  const { navigate, user, setUser, searchQuery, setSearchQuery,} = useContext(ShopContext);
+
+  // Redireccionar a la pagina de busqueda
+  const isShopPage = useLocation().pathname.endsWith("/shop");
+  useEffect(() => {
+    if(searchQuery.length > 0 && !isShopPage){
+      navigate('/shop');;
+    }
+  })
   
 
   const toggleMenu = () => setMenuOpened((prev) => !prev);
@@ -51,6 +59,10 @@ const Header = () => {
           }`}
         >
           <input
+            // acttualiza el searchQuery cuando se escribe en el input desde shopContext hacia Shop.jsx
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+
             type="text"
             placeholder="Busca tu libro..."
             className="bg-transparent w-full text-sm outline-none pr-10 placeholder:text-gray-400"
