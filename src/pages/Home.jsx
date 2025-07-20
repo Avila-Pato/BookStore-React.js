@@ -5,6 +5,7 @@ import NewArrivals from '../components/NewArrivals.jsx';
 import FeaturedBooks from '../components/FeaturedBooks.jsx';
 import PopularBooks from '../components/PopularBooks.jsx';
 import NewsLetter from '../components/NewsLetter.jsx';
+import Achievements from '../components/Achievements.jsx';
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <NewArrivals />
       <FeaturedBooks />
       <PopularBooks />
+      <Achievements />
       <NewsLetter />
     </div>
   )

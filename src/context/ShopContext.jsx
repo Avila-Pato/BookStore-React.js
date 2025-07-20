@@ -2,8 +2,9 @@ import { createContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { dummyBooks } from "../assets/data";
 
-export const ShopContext = createContext();
 
+// eslint-disable-next-line react-refresh/only-export-components
+export const ShopContext = createContext();
 export const ShopContextProvider = ({ children }) => {
   const navigate = useNavigate();
   const [books, setBooks] = useState([]);
