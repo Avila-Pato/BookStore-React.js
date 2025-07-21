@@ -95,7 +95,7 @@ export const dummyBooks = [
   {
     _id: "1",
     name: "Foundations of Science",
-    image: book_1,
+    image: [book_1],
     offerPrice: 15,
     price: 35,
     description: "Learn energy, motion, and forces with simple examples and visuals for young science explorers.",
@@ -107,7 +107,7 @@ export const dummyBooks = [
   {
     _id: "2",
     name: "Everyday Math Explained",
-    image: book_2,
+    image: [book_2],
     offerPrice: 20,
     price: 35,
     description: "Basic math for daily life: budgeting, measuring, percentages, and more made easy and clear.",
@@ -119,7 +119,7 @@ export const dummyBooks = [
   {
     _id: "3",
     name: "Basics of Chemistry",
-    image: book_3,
+    image: [book_3],
     offerPrice: 10,
     price: 35,
     description: "Explore atoms, matter, and reactions in simple steps with visuals and easy chemistry terms.",
@@ -131,7 +131,7 @@ export const dummyBooks = [
   {
     _id: "4",
     name: "Tech and Logic Essentials",
-    image: book_4,
+    image: [book_4],
     offerPrice: 25,
     price: 35,
     description: "Learn coding basics, algorithms, and problem-solving using fun tasks and clear explanations.",
@@ -143,7 +143,7 @@ export const dummyBooks = [
   {
     _id: "5",
     name: "World Events and Ideas",
-    image: book_5,
+    image: [book_5],
     offerPrice: 15,
     price: 35,
     description: "Discover key global events, wars, and changes in a short, simple guide to world history.",
@@ -155,7 +155,7 @@ export const dummyBooks = [
   {
     _id: "6",
     name: "Understanding Life Science",
-    image: book_6,
+    image: [book_6],
     offerPrice: 18,
     price: 35,
     description: "Explore cells, genetics, ecosystems, and biology basics in easy terms for curious readers.",
@@ -169,7 +169,7 @@ export const dummyBooks = [
   {
     _id: "7",
     name: "The Magic Treehouse",
-    image: book_7,
+    image: [book_7],
     offerPrice: 12,
     price: 35,
     description: "Time travel tales with fun lessons, magic, and learning for young adventurous minds.",
@@ -181,7 +181,7 @@ export const dummyBooks = [
   {
     _id: "8",
     name: "Animal Friends Forever",
-    image: book_8,
+    image: [book_8],
     offerPrice: 14,
     price: 35,
     description: "Stories of animal friendships, teamwork, and kindness told with colorful illustrations.",
@@ -193,7 +193,7 @@ export const dummyBooks = [
   {
     _id: "9",
     name: "Fairyland Dreams",
-    image: book_9,
+    image: [book_9],
     offerPrice: 18,
     price: 35,
     description: "A magical land of fairies and princesses solving problems with courage and teamwork.",
@@ -205,7 +205,7 @@ export const dummyBooks = [
   {
     _id: "10",
     name: "Super Jack and the Dragon",
-    image: book_10,
+    image: [book_10],
     offerPrice: 20,
     price: 35,
     description: "Join Jack in his brave journey to defeat a dragon and save his town.",
@@ -217,7 +217,7 @@ export const dummyBooks = [
   {
     _id: "11",
     name: "Treasure Island Map",
-    image: book_11,
+    image: [book_11],
     offerPrice: 15,
     price: 35,
     description: "A thrilling quest with hidden maps, clues, and a treasure adventure to enjoy.",
@@ -229,7 +229,7 @@ export const dummyBooks = [
   {
     _id: "12",
     name: "Kids in Space",
-    image: book_12,
+    image: [book_12],
     offerPrice: 17,
     price: 35,
     description: "Explore planets, rockets, and space fun with children on a wild ride to the stars.",
@@ -243,7 +243,7 @@ export const dummyBooks = [
   {
     _id: "13",
     name: "Healthy Living Guide",
-    image: book_13,
+    image: [book_13],
     offerPrice: 20,
     price: 35,
     description: "Simple tips on staying fit, eating right, and living a healthier life with balance and wellness.",
@@ -255,7 +255,7 @@ export const dummyBooks = [
   {
     _id: "14",
     name: "Yoga and You",
-    image: book_14,
+    image: [book_14],
     offerPrice: 18,
     price: 35,
     description: "Basic yoga poses and routines to improve flexibility, calm the mind, and reduce daily stress.",
@@ -267,7 +267,7 @@ export const dummyBooks = [
   {
     _id: "15",
     name: "Nutrition Simplified",
-    image: book_15,
+    image: [book_15],
     offerPrice: 15,
     price: 35,
     description: "Learn about healthy eating, food groups, and smart choices to boost energy and stay strong.",
@@ -279,7 +279,7 @@ export const dummyBooks = [
   {
     _id: "16",
     name: "Rest and Recharge",
-    image: book_16,
+    image: [book_16],
     offerPrice: 22,
     price: 35,
     description: "Discover how sleep, rest, and relaxation improve mood, health, and focus in daily life.",
@@ -291,7 +291,7 @@ export const dummyBooks = [
   {
     _id: "17",
     name: "Quick Fitness Plan",
-    image: book_17,
+    image: [book_17],
     offerPrice: 25,
     price: 35,
     description: "A short workout routine to keep fit, gain energy, and build healthy habits for every day.",
@@ -303,7 +303,7 @@ export const dummyBooks = [
   {
     _id: "18",
     name: "Nature Heals",
-    image: book_18,
+    image: [book_18],
     offerPrice: 18,
     price: 35,
     description: "Discover how spending time in nature helps reduce stress, clear your mind, and feel refreshed.",
@@ -317,7 +317,7 @@ export const dummyBooks = [
   {
     _id: "19",
     name: "Whispers in the Dark",
-    image: book_19,
+    image: [book_19],
     offerPrice: 30,
     price: 35,
     description: "A creepy tale of shadows and voices that haunt a house deep within a forgotten forest.",
@@ -329,7 +329,7 @@ export const dummyBooks = [
   {
     _id: "20",
     name: "The Haunted Woods",
-    image: book_20,
+    image: [book_20],
     offerPrice: 25,
     price: 35,
     description: "Mysterious events unfold in a forest where no one returns once they enter after sunset.",
@@ -341,7 +341,7 @@ export const dummyBooks = [
   {
     _id: "21",
     name: "Voices from the Grave",
-    image: book_21,
+    image: [book_21],
     offerPrice: 18,
     price: 35,
     description: "Eerie whispers call from the cemetery, revealing long-lost secrets buried deep beneath the ground.",
@@ -353,7 +353,7 @@ export const dummyBooks = [
   {
     _id: "22",
     name: "Night of the Shadows",
-    image: book_22,
+    image: [book_22],
     offerPrice: 22,
     price: 35,
     description: "When night falls, evil rises. A town is stalked by dark figures and fearsome creatures unknown.",
@@ -365,7 +365,7 @@ export const dummyBooks = [
   {
     _id: "23",
     name: "The Mirror's Curse",
-    image: book_23,
+    image: [book_23],
     offerPrice: 28,
     price: 35,
     description: "A haunted mirror shows twisted realities, drawing people in and trapping them forever inside it.",
@@ -377,7 +377,7 @@ export const dummyBooks = [
   {
     _id: "24",
     name: "Basement of Bones",
-    image: book_24,
+    image: [book_24],
     offerPrice: 30,
     price: 35,
     description: "Dark secrets lurk beneath an old home, where bones whisper and spirits walk in silence.",
@@ -391,7 +391,7 @@ export const dummyBooks = [
   {
     _id: "25",
     name: "Start Your Own Business",
-    image: book_25,
+    image: [book_25],
     offerPrice: 22,
     price: 35,
     description: "Step-by-step guide to launching a business from idea to reality, even with little experience.",
@@ -403,7 +403,7 @@ export const dummyBooks = [
   {
     _id: "26",
     name: "Brand Like a Pro",
-    image: book_26,
+    image: [book_26],
     offerPrice: 24,
     price: 35,
     description: "Master the art of branding, learn customer psychology, and build a strong, lasting identity.",
@@ -415,7 +415,7 @@ export const dummyBooks = [
   {
     _id: "27",
     name: "Lead with Purpose",
-    image: book_27,
+    image: [book_27],
     offerPrice: 26,
     price: 35,
     description: "Gain leadership skills to inspire, manage, and grow your business or team with confidence.",
@@ -427,7 +427,7 @@ export const dummyBooks = [
   {
     _id: "28",
     name: "Finance for Everyone",
-    image: book_28,
+    image: [book_28],
     offerPrice: 18,
     price: 35,
     description: "Easy ways to manage money, save smartly, and understand your personal and business finances.",
@@ -439,7 +439,7 @@ export const dummyBooks = [
   {
     _id: "29",
     name: "Mastering Negotiation",
-    image: book_29,
+    image: [book_29],
     offerPrice: 22,
     price: 35,
     description: "Practical techniques to win deals, communicate clearly, and negotiate in any business setting.",
@@ -451,7 +451,7 @@ export const dummyBooks = [
   {
     _id: "30",
     name: "Productivity Hacks",
-    image: book_30,
+    image: [book_30],
     offerPrice: 20,
     price: 35,
     description: "Time-saving strategies to stay organized, finish tasks faster, and make every day productive.",
@@ -465,7 +465,7 @@ export const dummyBooks = [
   {
     _id: "31",
     name: "Ancient Civilizations",
-    image: book_31,
+    image: [book_31],
     offerPrice: 15,
     price: 35,
     description: "Explore early human societies, how they lived, built cities, and shaped the world today.",
@@ -477,7 +477,7 @@ export const dummyBooks = [
   {
     _id: "32",
     name: "World War Chronicles",
-    image: book_32,
+    image: [book_32],
     offerPrice: 18,
     price: 35,
     description: "Learn about major battles, leaders, and events from both world wars that shaped nations.",
@@ -489,7 +489,7 @@ export const dummyBooks = [
   {
     _id: "33",
     name: "Leaders Who Changed the World",
-    image: book_33,
+    image: [book_33],
     offerPrice: 12,
     price: 35,
     description: "Discover inspiring stories of historical leaders who transformed countries and inspired generations.",
@@ -501,7 +501,7 @@ export const dummyBooks = [
   {
     _id: "34",
     name: "The Rise and Fall of Empires",
-    image: book_34,
+    image: [book_34],
     offerPrice: 20,
     price: 35,
     description: "From Rome to the Ottomans, explore how empires grew powerful and what led to collapse.",
@@ -513,7 +513,7 @@ export const dummyBooks = [
   {
     _id: "35",
     name: "History of Inventions",
-    image: book_35,
+    image: [book_35],
     offerPrice: 22,
     price: 35,
     description: "A journey through game-changing inventions that shaped modern life and changed human progress.",
@@ -525,7 +525,7 @@ export const dummyBooks = [
   {
     _id: "36",
     name: "Explorers and Voyages",
-    image: book_36,
+    image: [book_36],
     offerPrice: 25,
     price: 35,
     description: "Tales of famous explorers, their discoveries, and how they mapped the unknown world.",
@@ -539,7 +539,7 @@ export const dummyBooks = [
   {
     _id: "37",
     name: "Into the Unknown",
-    image: book_37,
+    image: [book_37],
     offerPrice: 16,
     price: 35,
     description: "Follow a bold journey through mysterious lands filled with danger, courage, and discovery.",
@@ -551,7 +551,7 @@ export const dummyBooks = [
   {
     _id: "38",
     name: "Lost in the Jungle",
-    image: book_38,
+    image: [book_38],
     offerPrice: 19,
     price: 35,
     description: "Lost in the Jungle",
@@ -563,7 +563,7 @@ export const dummyBooks = [
   {
     _id: "39",
     name: "Mountains of Mystery",
-    image: book_39,
+    image: [book_39],
     offerPrice: 20,
     price: 35,
     description: "Scaling icy peaks and ancient caves, a group finds danger and secrets buried in snow.",
@@ -575,7 +575,7 @@ export const dummyBooks = [
   {
     _id: "40",
     name: "The Desert Odyssey",
-    image: book_40,
+    image: [book_40],
     offerPrice: 23,
     price: 35,
     description: "An epic quest across blazing sands, where courage and wit are the only means to survive.",
@@ -587,7 +587,7 @@ export const dummyBooks = [
   {
     _id: "41",
     name: "Caves of Wonder",
-    image: book_41,
+    image: [book_41],
     offerPrice: 22,
     price: 35,
     description: "Deep underground, a hidden world awaits with lost treasures, strange creatures, and ancient magic.",
@@ -599,7 +599,7 @@ export const dummyBooks = [
   {
     _id: "42",
     name: "Frozen Expedition",
-    image: book_42,
+    image: [book_42],
     offerPrice: 21,
     price: 35,
     description: "Brave the icy tundra and uncover secrets buried beneath snow and time in this tale.",
