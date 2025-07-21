@@ -13,16 +13,39 @@ const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
 
-  const { navigate, user, setUser, searchQuery, setSearchQuery,} = useContext(ShopContext);
 
-  // Redireccionar a la pagina de busqueda
-  const isShopPage = useLocation().pathname.startsWith("/shop");
-  useEffect(() => {
-    if(searchQuery.length > 0 && !isShopPage){
-      navigate('/shop');;
-    }
-  })
+  const {navigate, user, setUser, searchQuery, setSearchQuery, getCartCount } = useContext(ShopContext);
   
+  const location = useLocation();
+  const isShopPage = location.pathname.startsWith("/shop");
+
+  // Efecto simplificado y corregido
+  useEffect(() => {
+    const trimmedQuery = searchQuery.trim();
+    
+    // Si hay búsqueda y no estamos en Shop -> redirigir
+    if (trimmedQuery.length > 0 && !isShopPage) {
+      navigate("/shop");
+    }
+  }, [searchQuery, isShopPage, navigate]);
+
+  // Nuevo efecto para limpiar la búsqueda al cambiar de ruta
+  useEffect(() => {
+    if (!isShopPage && searchQuery.length > 0) {
+      setSearchQuery("");
+    }
+  }, [location.pathname, isShopPage, searchQuery, setSearchQuery]);
+
+  // Función para manejar cambios en el input (sin cambios)
+  const handleSearchChange = (e) => {
+    const value = e.target.value;
+    setSearchQuery(value);
+    
+    if (value.trim().length > 0 && !isShopPage) {
+      navigate("/shop");
+    }
+  };
+
   useEffect(() => {
     window.scrollTo({top: 0, behavior: "smooth"});
   }, [searchQuery]);
@@ -64,7 +87,7 @@ const Header = () => {
           <input
             // acttualiza el searchQuery cuando se escribe en el input desde shopContext hacia Shop.jsx
             value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
+            onChange={handleSearchChange}
 
             type="text"
             placeholder="Busca tu libro..."
@@ -96,7 +119,7 @@ const Header = () => {
       <Link to={"/cart"} className="relative bold-16">
         Carrito
         <span className="bg-secondary text-white text-[12px] font-semibold absolute -top-3.5 -right-2 flexCenter w-4 h-4 rounded-full shadow-md">
-          0
+          {getCartCount()}
         </span>
       </Link>
 

@@ -12,11 +12,17 @@ import ProductFeatures from "../components/ProductFeatures.jsx";
 
 
 const ProductDetails = () => {
-  const { books, currency } = useContext(ShopContext);
+  const { books, currency, addToCart, cartItems } = useContext(ShopContext);
   const { id } = useParams();
 
   const book = books.find((book) => book._id === id);
   const [image, setImage] = useState(null);
+
+  useEffect(() => {
+    if (book) {
+      setImage(book.image[0]);
+    }
+  }, [book]);
 
   useEffect(() => {
     if (book) {
@@ -79,7 +85,7 @@ const ProductDetails = () => {
             </div>
             <p className="max-w-[555px]">{book.description}</p>
             <div className="flex items-center gap-x-4 mt-6">
-            <button className="btn-dark sm:w-1/2 flexCenter gap-x-2 capitalize !rounded-md"> <TbShoppingBagPlus />
+            <button onClick={() => addToCart(book._id)} className="btn-dark sm:w-1/2 flexCenter gap-x-2 capitalize !rounded-md"> <TbShoppingBagPlus />
                 Agregar al carrito
             </button>
             <button className="btn-secondary !rounded-md">

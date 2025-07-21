@@ -11,7 +11,7 @@ const ProductDescription = () => {
       <hr  className='h-[1px] w-full border-gray-500/30'/>
       <div className='flex flex-col gap-3 p-3'>
         <div>
-          <h5>Derail</h5>
+          <h5>Detalles</h5>
            <p className='sm'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam corrupti quod atque ad dignissimos sed praesentium quae eveniet optio ex?
            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, eveniet.</p>

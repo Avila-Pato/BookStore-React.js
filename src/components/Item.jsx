@@ -5,7 +5,7 @@ import { ShopContext } from '../context/ShopContext.jsx';
 
 const Item = ({book, fromHero}) => {
 
-  const {navigate, currency} = useContext(ShopContext);
+  const {navigate, currency, addToCart} = useContext(ShopContext);
 // card de libros
   return book ? (
     <div
@@ -24,7 +24,7 @@ const Item = ({book, fromHero}) => {
         </div>
         <div className='flex justify-between items-start gap-2 mt-1'>
           <p className='line-clamp-1'>{book.description}</p>
-          <button onClick={() => navigate(`/shop/${book.id}`)} className='cursor-pointer '>
+          <button  onClick={(e) => {addToCart(book._id); e.stopPropagation(); }} className='cursor-pointer '>
             <TbShoppingBagPlus className='text-xl'/>
           </button>
         </div>

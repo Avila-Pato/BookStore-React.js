@@ -9,6 +9,8 @@ import Contact from './pages/Contact'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
+import Cart from './pages/Cart'
+import AddressForm from './pages/AddressForm'
 
 const App = () => {
   return (
@@ -22,6 +24,9 @@ const App = () => {
         <Route path='/shop/:category/:id' element={<ProductDetails />} />
         <Route path='/blog' element={<Blog />}/>
         <Route path='/contact' element={<Contact />}/>
+        <Route path='/cart' element={<Cart/>} />
+        <Route path='/address-form' element={<AddressForm />} />
+
         </Routes>
         <Footer />
     </main>
