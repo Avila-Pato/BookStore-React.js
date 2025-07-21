@@ -16,7 +16,7 @@ const Header = () => {
   const { navigate, user, setUser, searchQuery, setSearchQuery,} = useContext(ShopContext);
 
   // Redireccionar a la pagina de busqueda
-  const isShopPage = useLocation().pathname.endsWith("/shop");
+  const isShopPage = useLocation().pathname.startsWith("/shop");
   useEffect(() => {
     if(searchQuery.length > 0 && !isShopPage){
       navigate('/shop');;
