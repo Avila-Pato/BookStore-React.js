@@ -10,6 +10,8 @@ const CartTotal = () => {
      const [addresses, setAddresses] = useState(dummyAddress);
      const [showAddress, setShowAddress] = useState(false);
      const [selectedAddress, setSelectedAddress] = useState(dummyAddress[0]);
+
+     
   return (
     <div>
       <h3 className="bold-22">

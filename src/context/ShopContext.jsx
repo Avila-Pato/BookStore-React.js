@@ -51,10 +51,12 @@ export const ShopContextProvider = ({ children }) => {
 
   // Actualizar la cantidad de items del carrito 
 
-  const updateQuantity = (itemId, quantity) => {
-    const cartData = {...cartItems}
-    cartData[itemId] = quantity;
-  }
+  const updateQuantity = (bookId, quantity) => {
+  setCartItems(prev => ({
+    ...prev,
+    [bookId]: quantity
+  }));
+};
 
   //  obtener cantidad total del carrito
   const getCartAmount = () => {

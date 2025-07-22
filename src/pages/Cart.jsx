@@ -33,13 +33,15 @@ const Cart = () => {
                         <div className='flexBetween mt-2'>
                           <div className='flex items-center ring-1 ring-slate-900/5 p-0.5 rounded-full overflow-hidden bg-white'>
                           {/* Disminuir */}
-                          <button onClick={() => updateQuantity(book._id, quantity - 1)} className='p-1.5 bg-primary rounded-full cursor-pointer'>
+                          <button onClick={() => updateQuantity(book._id, quantity - 1)}
+                          disabled={quantity === 1} 
+                          className='p-1.5 bg-primary rounded-full cursor-pointer'>
                             <FaMinus className='text-xs'/>
                           </button>
                           <p className='px-2'>{ quantity }</p>
                           {/* Aumentar */}
                           <button onClick={() => updateQuantity(book._id, quantity + 1)}>
-                            <FaPlus  className='text-xs'/>
+                            <FaPlus  className='text-xs cursor-pointer'/>
                           </button>
                           </div>
                         </div>
