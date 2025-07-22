@@ -141,11 +141,11 @@ const Header = () => {
               onClick={() => navigate("/my-orders")}
               className="p-2 rounded-md hover:bg-primary cursor-pointer"
             >
-              Orders
+              Mis Compras
             </li>
-            <li className="p-2 rounded-md hover:bg-primary cursor-pointer">
+            {/* <li className="p-2 rounded-md hover:bg-primary cursor-pointer">
               Logout
-            </li>
+            </li> */}
           </ul>
         )}
       </div>
