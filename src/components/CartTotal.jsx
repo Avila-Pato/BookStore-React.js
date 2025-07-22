@@ -11,7 +11,12 @@ const CartTotal = () => {
      const [showAddress, setShowAddress] = useState(false);
      const [selectedAddress, setSelectedAddress] = useState(dummyAddress[0]);
 
-     
+    const subtotal = getCartAmount();
+    const shipping = subtotal === 0 ? 0 : delivery_charges;
+    const tax = subtotal * 0.02; // 2%
+    const totalAmount = subtotal + shipping + tax;
+
+
   return (
     <div>
       <h3 className="bold-22">
@@ -27,29 +32,41 @@ const CartTotal = () => {
           <h4 className='h4 mb-5'>Donde quieres recibir tu pedido?</h4>
           <div className='relative flex justify-between items-start mt-2'>
             <p>{selectedAddress ? `${selectedAddress.street}, ${selectedAddress.city }, ${selectedAddress.state}, ${selectedAddress.country}` : "Direccion no encontrada"}</p>
-            <button onClick={() => setShowAddress(!showAddress)} className="">Cambiar</button>
+            <button onClick={() => setShowAddress(!showAddress)} className="text-secondary medium-14 hover:underline cursor-pointer">Cambiar</button>  
             {showAddress && (
-              <div>
+              <div className='absolute top-10 py-1 bg-white ring-1 ring-slate-900/10 text-sm w-full'>
                 {addresses.map((address, index) => (
-                  <p key={index} onClick={() => (setSelectedAddress(address), setShowAddress(false))} className="">
+                  <p key={index} onClick={() =>(
+                    setSelectedAddress(address),
+                    setShowAddress(false))}
+                    className="p-2 cursor-pointer hover:bg-gray-100 medium-14">
                     {address.street},
                     {address.city},
                     {address.state},
                     {address.country}
                   </p>
                 ))}
-                <p onclick={() => navigate("/address-form")}>Agregar direccion</p>
+                <p onClick={() => navigate("/address-form")} className='p-2 text-center cursor-pointer hover:bg-tertiary'>Agregar direccion</p>
               </div>
             )}
           </div>
         </div>
         <hr className="bordder-gray-300 my-5"/>
 
-        <div>
+        <div className='my-6'>
           <h4 className='h4'>Metodo de Pago</h4>
-          <div>
-            <div>Dinero en efectivo</div>
-            <div>Seguro</div>
+          <div className='flex gap-3'>
+
+            <div onClick={() => setMethod("COD")} 
+            className={`${ method === "COD" ? "btn-secondary" : "btn-white"} !py-1 text-xs cursor-pointer `}>
+              Dinero en efectivo
+              </div>
+
+              <div onClick={() => setMethod("stripe")} 
+            className={`${ method === "stripe" ? "btn-secondary" : "btn-white"} !py-1 text-xs cursor-pointer `}>
+              Stripe
+              </div>
+
           </div>
         </div>
         <hr className="bordder-gray-300 my-5"/>
@@ -58,19 +75,23 @@ const CartTotal = () => {
         <div className='flex justify-between'>
           <h5 className='h5'>Precio</h5>
           <p>
-            {currency}{getCartAmount()}
+            <p>{currency}{subtotal.toFixed(2)}</p>
           </p>
         </div>
-
+            <div>
+              <div className='flex justify-between'>
+                <h5 className='h5'>Envio </h5>
+                 <p>{currency}{shipping.toFixed(2)}</p>
+              </div>
+            </div>
         <div className='flex justify-between'>
           <h5 className='h5'>Tax de envio</h5>
-          <p>{currency}{getCartAmount() * 2 /100}</p>
+           <p>{currency}{tax.toFixed(2)}</p>
         </div>
         <div className='flex justify-between text-lg font-medium mt-3'>
           <h5 className='h5'>Cantidad Total</h5>
           <p className='font-bold'>
-            {currency}
-            {getCartAmount() === 0 ? "$0.00" : getCartAmount() + getCartAmount() * 2 / 100}
+            <p className='font-bold'>{currency}{totalAmount.toFixed(2)}</p>
           </p>
         </div>
       </div>

@@ -59,13 +59,14 @@ export const ShopContextProvider = ({ children }) => {
 };
 
   //  obtener cantidad total del carrito
+  // getCartAmount
   const getCartAmount = () => {
     let totalAmount = 0;
     for(const itemId in cartItems){
       if(cartItems[itemId] > 0) {
         const item = books.find((book) => book._id === itemId);
         if(item) {
-          totalAmount + - item.offerPrice * cartItems[itemId]
+          totalAmount += item.offerPrice * cartItems[itemId]
         }
       }
     }
